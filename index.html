@@ -19,25 +19,27 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 40px;
-            border-radius: 25px;
-            width: 80%;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 80%;
+    max-width: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
         }
 
         h1 {
-            font-size: 45px;
+            font-size: 40px;
             margin-bottom: 10px;
+            overflow-wrap: break-word;
         }
 
         p {
             font-size: 18px;
             line-height: 1.6;
+            overflow-wrap: break-word;
         }
-
         .heart {
             font-size: 60px;
             animation: beat 1s infinite;
@@ -65,6 +67,23 @@
         transform: translateY(0);
     }
 }
+        @media (max-width: 600px) {
+    .card {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .heart {
+        font-size: 50px;
+    }
+        }
     </style>
 </head>
 
