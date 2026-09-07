@@ -476,20 +476,10 @@
                 id="letterBox"
             >
 
-                <div
-                    class="letter-content"
-                >Hai Adel ❤️
-
-Selamat ulang tahun!
-
-Semoga di umur kamu yang baru ini, kamu selalu dikelilingi hal-hal baik, orang-orang yang sayang sama kamu, dan semua hal yang kamu impikan bisa menjadi kenyataan.
-
-Terima kasih sudah menjadi seseorang yang begitu berarti.
-
-Semoga kamu selalu bahagia. ❤️
-
-Happy Birthday, Adel! 🎂💕</div>
-
+<div
+    class="letter-content"
+    id="typingText"
+></div>
             </div>
 
         </div>
@@ -660,7 +650,9 @@ Happy Birthday, Adel! 🎂💕</div>
             () => {
 
                 startMusic();
-
+                if (letterBox.classList.contains('active')) {
+                    typeMessage();
+                }
                 letterBox.classList.toggle(
                     'active'
                 );
@@ -684,7 +676,41 @@ Happy Birthday, Adel! 🎂💕</div>
 
             }
         );
+const typingText = document.getElementById("typingText");
 
+const birthdayMessage = `Hai Adel ❤️
+
+Selamat ulang tahun!
+
+Semoga di umur kamu yang baru ini, kamu selalu dikelilingi hal-hal baik, orang-orang yang sayang sama kamu, dan semua hal yang kamu impikan bisa menjadi kenyataan.
+
+Terima kasih sudah menjadi seseorang yang begitu berarti.
+
+Semoga kamu selalu bahagia. ❤️
+
+
+Happy Birthday, Adel! 🎂💕`;
+
+let typingStarted = false;
+
+function typeMessage() {
+    if (typingStarted) return;
+
+    typingStarted = true;
+    typingText.innerHTML = "";
+
+    let i = 0;
+
+    function type() {
+        if (i < birthdayMessage.length) {
+            typingText.innerHTML += birthdayMessage.charAt(i);
+            i++;
+            setTimeout(type, 35);
+        }
+    }
+
+    type();
+}
     </script>
 
 </body>
