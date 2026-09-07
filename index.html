@@ -19,14 +19,14 @@
         }
 
         .card {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px 20px;
-    border-radius: 25px;
-    width: 80%;
-    max-width: 500px;
-    box-sizing: border-box;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px 20px;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 500px;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
         }
 
         h1 {
@@ -40,6 +40,7 @@
             line-height: 1.6;
             overflow-wrap: break-word;
         }
+
         .heart {
             font-size: 60px;
             animation: beat 1s infinite;
@@ -50,99 +51,110 @@
                 transform: scale(1.2);
             }
         }
+
         .subtitle {
-    font-size: 20px;
-    font-style: italic;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-        @media (max-width: 600px) {
-    .card {
-        padding: 25px 18px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .heart {
-        font-size: 50px;
-    }
+            font-size: 20px;
+            font-style: italic;
+            animation: fadeIn 2s ease-in-out;
         }
-    button {
-    margin-top: 20px;
-    padding: 14px 24px;
-    border: none;
-    border-radius: 30px;
-    background: white;
-    color: #ff6b81;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-button:hover {
-    transform: scale(1.05);
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
 
-#surprise {
-    display: none;
-    margin-top: 25px;
-    animation: fadeIn 1s ease-in-out;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff6b81;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 25px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .heart {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<div class="card">
-    <div class="heart">❤️</div>
+    <div class="card">
 
-    <h1>Happy Birthday, Adel!</h1>
+        <div class="heart">❤️</div>
 
-    <p class="subtitle">A little surprise for you... ✨</p>
+        <h1>Happy Birthday, Adel!</h1>
 
-    <p>
-        Semoga hari ini menjadi hari yang indah,
-        dan semoga semua hal baik selalu datang
-        ke dalam hidupmu. ❤️
-    </p>
+        <p class="subtitle">
+            A little surprise for you... ✨
+        </p>
 
-    <p>
-        From someone who cares about you 💕
-    </p>
-    <button onclick="showMessage()">💌 Open Your Surprise</button>
+        <p>
+            Semoga hari ini menjadi hari yang indah,
+            dan semoga semua hal baik selalu datang
+            ke dalam hidupmu. ❤️
+        </p>
 
-<div id="surprise">
-    <p>✨ Surprise! ✨</p>
-    <p>
-        Semoga semua keinginan dan impian kamu
-        bisa tercapai. Jangan lupa selalu bahagia ya ❤️
-    </p>
-</div>
+        <p>
+            From someone who cares about you 💕
+        </p>
 
-</div>
+        <button onclick="showMessage()">
+            💌 Open Your Surprise
+        </button>
+
+        <div id="surprise">
+            <p>✨ Surprise! ✨</p>
+
+            <p>
+                Semoga semua keinginan dan impian kamu
+                bisa tercapai. Jangan lupa selalu bahagia ya ❤️
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("surprise").style.display = "block";
+        }
+    </script>
 
 </body>
-    <script>
-    function showMessage() {
-        document.getElementById("surprise").style.display = "block";
-    }
-    </script>
 </html>
