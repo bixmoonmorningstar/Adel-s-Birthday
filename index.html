@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Happy Birthday, Adel! ❤️</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
-        /* Reset & Base Styling */
         * {
             margin: 0;
             padding: 0;
@@ -23,262 +26,376 @@
         body {
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 45%, #a1c4fd 100%);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff9a9e 0%,
+                    #fecfef 45%,
+                    #a1c4fd 100%
+                );
+
             background-attachment: fixed;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             padding: 20px 15px;
+
             overflow-x: hidden;
+
             position: relative;
+
             color: #4a4a4a;
         }
 
-        /* Falling Hearts */
+        /* =========================
+           FALLING HEARTS
+        ========================= */
+
         .hearts-container {
             position: fixed;
             top: 0;
             left: 0;
+
             width: 100%;
             height: 100%;
+
             pointer-events: none;
+
             z-index: 1;
+
             overflow: hidden;
         }
 
         .heart {
             position: absolute;
+
             top: -10%;
+
             user-select: none;
-            animation: fall linear infinite;
+
+            animation: fall linear forwards;
+
             opacity: 0.8;
-            filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.3));
+
+            filter:
+                drop-shadow(
+                    0 2px 4px rgba(255, 105, 180, 0.3)
+                );
         }
 
         @keyframes fall {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
                 opacity: 0.9;
             }
 
             100% {
-                transform: translateY(105vh) rotate(360deg);
-                opacity: 0.1;
+                transform:
+                    translateY(110vh)
+                    rotate(360deg);
+
+                opacity: 0;
             }
         }
 
-        /* Music Player */
-        .music-player {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.6);
-            border-radius: 50px;
-            padding: 8px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
 
-        .music-player:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.65);
-        }
-
-        .music-btn {
-            background: #ff6b81;
-            border: none;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-        }
-
-        .music-text {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #2c3e50;
-            padding-right: 4px;
-        }
-
-        /* Main Container */
         .container {
             position: relative;
+
             z-index: 10;
+
             width: 100%;
+
             max-width: 480px;
+
             margin: 0 auto;
         }
 
+        /* =========================
+           GLASS CARD
+        ========================= */
+
         .glass-card {
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background:
+                rgba(255, 255, 255, 0.45);
+
+            backdrop-filter:
+                blur(16px);
+
+            -webkit-backdrop-filter:
+                blur(16px);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.7);
+
             border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, 0.7);
+
             box-shadow:
-                0 20px 40px rgba(255, 154, 162, 0.25),
-                0 8px 16px rgba(0, 0, 0, 0.05);
+                0 20px 40px
+                rgba(255, 154, 162, 0.25),
+
+                0 8px 16px
+                rgba(0, 0, 0, 0.05);
+
             padding: 32px 24px;
+
             text-align: center;
         }
 
-        /* Typography */
+        /* =========================
+           TITLE
+        ========================= */
+
         .header-title {
             font-family: 'Caveat', cursive;
+
             font-size: 2.7rem;
+
             color: #ff4757;
+
             margin-bottom: 6px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
             line-height: 1.2;
+
+            text-shadow:
+                1px 1px 2px
+                rgba(255, 255, 255, 0.8);
         }
 
         .subtitle {
             font-size: 0.95rem;
+
             color: #6c757d;
+
             margin-bottom: 24px;
+
             font-weight: 300;
+
             letter-spacing: 0.5px;
         }
 
-        /* Photo */
+        /* =========================
+           PHOTO
+        ========================= */
+
         .photo-container {
             width: 100%;
+
             max-width: 280px;
+
             height: 280px;
-            margin: 0 auto 24px auto;
+
+            margin:
+                0 auto 24px auto;
+
             border-radius: 20px;
+
             overflow: hidden;
-            box-shadow: 0 12px 25px rgba(255, 107, 129, 0.2);
-            border: 4px solid rgba(255, 255, 255, 0.8);
-            position: relative;
+
+            box-shadow:
+                0 12px 25px
+                rgba(255, 107, 129, 0.2);
+
+            border:
+                4px solid
+                rgba(255, 255, 255, 0.8);
+
             background: #f8d7da;
+
+            position: relative;
         }
 
         .photo-container img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
+
             object-position: center;
+
             display: block;
-            transition: transform 0.5s ease;
+
+            transition:
+                transform 0.5s ease;
         }
 
         .photo-container:hover img {
             transform: scale(1.04);
         }
 
-        /* Surprise Button */
+        /* =========================
+           SURPRISE BUTTON
+        ========================= */
+
         .btn-surprise {
-            background: linear-gradient(135deg, #ff6b81, #ff4757);
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff6b81,
+                    #ff4757
+                );
+
             color: white;
+
             border: none;
-            padding: 14px 28px;
+
+            padding:
+                14px 28px;
+
             font-size: 1rem;
+
             font-weight: 600;
+
             border-radius: 50px;
+
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.35);
-            transition: all 0.3s ease;
+
+            box-shadow:
+                0 8px 20px
+                rgba(255, 71, 87, 0.35);
+
+            transition:
+                all 0.3s ease;
+
             display: inline-flex;
+
             align-items: center;
+
+            justify-content: center;
+
             gap: 8px;
+
             max-width: 100%;
         }
 
         .btn-surprise:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.45);
+            transform:
+                translateY(-3px)
+                scale(1.02);
+
+            box-shadow:
+                0 12px 25px
+                rgba(255, 71, 87, 0.45);
         }
 
         .btn-surprise:active {
-            transform: translateY(1px) scale(0.98);
+            transform:
+                translateY(1px)
+                scale(0.98);
         }
 
-        /* Secret Letter */
+        /* =========================
+           SECRET LETTER
+        ========================= */
+
         .letter-box {
             max-height: 0;
+
             opacity: 0;
+
             overflow: hidden;
+
             transition:
                 max-height 0.8s ease-in-out,
                 opacity 0.6s ease,
                 margin-top 0.4s ease;
+
             text-align: left;
-            background: rgba(255, 255, 255, 0.65);
+
+            background:
+                rgba(255, 255, 255, 0.65);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.8);
+
             border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         .letter-box.active {
             max-height: 1000px;
+
             opacity: 1;
+
             margin-top: 24px;
+
             padding: 22px;
-            box-shadow: inset 0 2px 10px rgba(255, 182, 193, 0.2);
+
+            box-shadow:
+                inset 0 2px 10px
+                rgba(255, 182, 193, 0.2);
         }
 
         .letter-content {
             font-size: 0.95rem;
+
             line-height: 1.7;
+
             color: #333333;
+
             white-space: pre-line;
+
             font-weight: 400;
         }
 
-        /* Mobile */
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
+
             body {
-                padding: 15px 10px;
-            }
-
-            .music-player {
-                top: 10px;
-                right: 10px;
-                padding: 6px 10px;
-            }
-
-            .music-text {
-                font-size: 0.75rem;
+                padding:
+                    15px 10px;
             }
 
             .glass-card {
-                padding: 28px 18px;
+                padding:
+                    28px 18px;
             }
 
             .header-title {
-                font-size: 2.4rem;
+                font-size:
+                    2.4rem;
             }
         }
 
         @media (max-width: 380px) {
+
             .header-title {
-                font-size: 2.2rem;
+                font-size:
+                    2.2rem;
             }
 
             .photo-container {
-                max-width: 220px;
-                height: 220px;
+                max-width:
+                    220px;
+
+                height:
+                    220px;
             }
 
             .glass-card {
-                padding: 24px 16px;
+                padding:
+                    24px 16px;
             }
 
             .btn-surprise {
-                padding: 12px 22px;
-                font-size: 0.9rem;
+                padding:
+                    12px 22px;
+
+                font-size:
+                    0.9rem;
             }
         }
     </style>
@@ -286,28 +403,40 @@
 
 <body>
 
-    <!-- Audio -->
-    <audio id="bgMusic" loop preload="auto">
-        <source src="music.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung elemen audio.
+    <!-- =========================
+         MUSIC
+    ========================= -->
+
+    <audio
+        id="bgMusic"
+        loop
+        preload="auto"
+    >
+        <source
+            src="music.mp3"
+            type="audio/mpeg"
+        >
+
+        Browser Anda tidak mendukung audio.
     </audio>
 
-    <!-- Music Button -->
-    <div class="music-player" id="musicToggle">
-        <button class="music-btn" id="musicBtn" aria-label="Play/Pause Music">
-            ▶
-        </button>
 
-        <span class="music-text" id="musicText">
-            Putar Musik 🎵
-        </span>
-    </div>
+    <!-- =========================
+         FALLING HEARTS
+    ========================= -->
 
-    <!-- Falling Hearts -->
-    <div class="hearts-container" id="heartsContainer"></div>
+    <div
+        class="hearts-container"
+        id="heartsContainer"
+    ></div>
 
-    <!-- Main Card -->
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================= -->
+
     <main class="container">
+
         <div class="glass-card">
 
             <h1 class="header-title">
@@ -318,19 +447,39 @@
                 A little surprise for you... ✨
             </p>
 
-            <!-- Photo -->
+
+            <!-- PHOTO -->
+
             <div class="photo-container">
-                <img src="adel.jpg" alt="Adel" id="adelPhoto">
+
+                <img
+                    src="adel.jpg"
+                    alt="Adel"
+                >
+
             </div>
 
-            <!-- Surprise Button -->
-            <button class="btn-surprise" id="openBtn">
+
+            <!-- SURPRISE BUTTON -->
+
+            <button
+                class="btn-surprise"
+                id="openBtn"
+            >
                 💌 Open Your Surprise
             </button>
 
-            <!-- Secret Letter -->
-            <div class="letter-box" id="letterBox">
-                <div class="letter-content" id="letterText">Hai Adel ❤️
+
+            <!-- SECRET LETTER -->
+
+            <div
+                class="letter-box"
+                id="letterBox"
+            >
+
+                <div
+                    class="letter-content"
+                >Hai Adel ❤️
 
 Selamat ulang tahun!
 
@@ -341,17 +490,24 @@ Terima kasih sudah menjadi seseorang yang begitu berarti.
 Semoga kamu selalu bahagia. ❤️
 
 Happy Birthday, Adel! 🎂💕</div>
+
             </div>
 
         </div>
+
     </main>
 
-    <script>
-        // ==============================
-        // 1. Falling Hearts
-        // ==============================
 
-        const heartsContainer = document.getElementById('heartsContainer');
+    <script>
+
+        /* =========================
+           FALLING HEARTS
+        ========================= */
+
+        const heartsContainer =
+            document.getElementById(
+                'heartsContainer'
+            );
 
         const heartSymbols = [
             '❤️',
@@ -362,117 +518,174 @@ Happy Birthday, Adel! 🎂💕</div>
         ];
 
         function createHeart() {
-            const heart = document.createElement('div');
 
-            heart.classList.add('heart');
+            const heart =
+                document.createElement(
+                    'div'
+                );
+
+            heart.classList.add(
+                'heart'
+            );
 
             const randomSymbol =
                 heartSymbols[
-                    Math.floor(Math.random() * heartSymbols.length)
+                    Math.floor(
+                        Math.random() *
+                        heartSymbols.length
+                    )
                 ];
 
-            heart.innerHTML = randomSymbol;
+            heart.innerHTML =
+                randomSymbol;
 
-            const startLeft = Math.random() * 100;
-            const size = Math.random() * 12 + 14;
-            const duration = Math.random() * 3 + 4;
-            const delay = Math.random() * 2;
+            const startLeft =
+                Math.random() * 100;
 
-            heart.style.left = startLeft + 'vw';
-            heart.style.fontSize = size + 'px';
-            heart.style.animationDuration = duration + 's';
-            heart.style.animationDelay = delay + 's';
+            const size =
+                Math.random() * 12 + 14;
 
-            heartsContainer.appendChild(heart);
+            const duration =
+                Math.random() * 3 + 4;
+
+            heart.style.left =
+                startLeft + 'vw';
+
+            heart.style.fontSize =
+                size + 'px';
+
+            heart.style.animationDuration =
+                duration + 's';
+
+            heartsContainer.appendChild(
+                heart
+            );
 
             setTimeout(() => {
+
                 heart.remove();
-            }, (duration + delay) * 1000);
+
+            }, duration * 1000);
         }
 
-        setInterval(createHeart, 350);
+        setInterval(
+            createHeart,
+            350
+        );
 
 
-        // ==============================
-        // 2. Surprise Button
-        // ==============================
+        /* =========================
+           MUSIC
+        ========================= */
 
-        const openBtn = document.getElementById('openBtn');
-        const letterBox = document.getElementById('letterBox');
+        const bgMusic =
+            document.getElementById(
+                'bgMusic'
+            );
 
-        const bgMusic = document.getElementById('bgMusic');
-        const musicBtn = document.getElementById('musicBtn');
-        const musicText = document.getElementById('musicText');
+        let musicStarted = false;
 
-        let isPlaying = false;
 
-        openBtn.addEventListener('click', () => {
+        function startMusic() {
 
-            letterBox.classList.toggle('active');
-
-            if (letterBox.classList.contains('active')) {
-
-                openBtn.innerHTML = '✨ Close Surprise';
-
-                if (!isPlaying) {
-                    playAudio();
-                }
-
-            } else {
-
-                openBtn.innerHTML = '💌 Open Your Surprise';
-
+            if (musicStarted) {
+                return;
             }
-        });
-
-
-        // ==============================
-        // 3. Music Control
-        // ==============================
-
-        function playAudio() {
 
             bgMusic.play()
                 .then(() => {
 
-                    isPlaying = true;
-
-                    musicBtn.innerHTML = '❚❚';
-                    musicText.innerHTML = 'Musik Diputar ✨';
+                    musicStarted = true;
 
                 })
                 .catch(() => {
 
                     console.log(
-                        'Browser meminta pengguna menekan tombol musik terlebih dahulu.'
+                        'Autoplay diblokir browser.'
                     );
 
                 });
         }
 
 
-        function pauseAudio() {
+        /*
+         * Coba autoplay ketika halaman dibuka.
+         */
 
-            bgMusic.pause();
+        window.addEventListener(
+            'load',
+            () => {
 
-            isPlaying = false;
+                startMusic();
 
-            musicBtn.innerHTML = '▶';
-            musicText.innerHTML = 'Putar Musik 🎵';
-        }
+            }
+        );
 
 
-        document
-            .getElementById('musicToggle')
-            .addEventListener('click', () => {
+        /*
+         * Kalau autoplay diblokir,
+         * musik akan mulai ketika
+         * pengguna melakukan interaksi.
+         */
 
-                if (isPlaying) {
-                    pauseAudio();
+        document.addEventListener(
+            'click',
+            () => {
+
+                startMusic();
+
+            },
+            {
+                once: true
+            }
+        );
+
+
+        /* =========================
+           SURPRISE BUTTON
+        ========================= */
+
+        const openBtn =
+            document.getElementById(
+                'openBtn'
+            );
+
+        const letterBox =
+            document.getElementById(
+                'letterBox'
+            );
+
+
+        openBtn.addEventListener(
+            'click',
+            () => {
+
+                startMusic();
+
+                letterBox.classList.toggle(
+                    'active'
+                );
+
+
+                if (
+                    letterBox.classList.contains(
+                        'active'
+                    )
+                ) {
+
+                    openBtn.innerHTML =
+                        '✨ Close Surprise';
+
                 } else {
-                    playAudio();
+
+                    openBtn.innerHTML =
+                        '💌 Open Your Surprise';
+
                 }
 
-            });
+            }
+        );
+
     </script>
 
 </body>
