@@ -84,6 +84,28 @@
         font-size: 50px;
     }
         }
+    button {
+    margin-top: 20px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff6b81;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    animation: fadeIn 1s ease-in-out;
+        }
     </style>
 </head>
 
@@ -105,8 +127,22 @@
     <p>
         From someone who cares about you 💕
     </p>
+    <button onclick="showMessage()">💌 Open Your Surprise</button>
+
+<div id="surprise">
+    <p>✨ Surprise! ✨</p>
+    <p>
+        Semoga semua keinginan dan impian kamu
+        bisa tercapai. Jangan lupa selalu bahagia ya ❤️
+    </p>
+</div>
 
 </div>
 
 </body>
+    <script>
+    function showMessage() {
+        document.getElementById("surprise").style.display = "block";
+    }
+    </script>
 </html>
