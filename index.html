@@ -48,30 +48,42 @@
                 transform: scale(1.2);
             }
         }
+        .subtitle {
+    font-size: 20px;
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 
 <body>
 
-    <div class="card">
-        <div class="heart">❤️</div>
+<div class="card">
+    <div class="heart">❤️</div>
 
-        <h1>Happy Birthday, Adel!</h1>
+    <h1>Happy Birthday, Adel!</h1>
 
-        <p>
-            Selamat ulang tahun! 🎂
-        </p>
+    <p class="subtitle">A little surprise for you... ✨</p>
 
-        <p>
-            Semoga hari ini menjadi hari yang indah,
-            dan semoga semua hal baik selalu datang
-            ke dalam hidupmu. ❤️
-        </p>
+    <p>
+        Semoga hari ini menjadi hari yang indah,
+        dan semoga semua hal baik selalu datang
+        ke dalam hidupmu. ❤️
+    </p>
 
-        <p>
-            From someone who cares about you 💕
-        </p>
-    </div>
-
-</body>
-</html>
+    <p>
+        From someone who cares about you 💕
+    </p>
+</div>
